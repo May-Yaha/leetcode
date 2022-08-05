@@ -60,33 +60,12 @@ struct ListNode {
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-/*
- *
- *
- *  //go ahead an instantiate a ListNode for ->next
-        $return = new ListNode($this->carry + $l1->val + $l2->val);
-
-        //如果 val 大于等于 10，carry 将进位设置为1，val减去10
-        if ($this->carry = intval($return->val > 9)) {
-            $return->val -= 10;
-        }
-
-        //如果没有下一个数字了，就做完了。否则将 next 定义为 ListNotes 的下一个
-        $return->next = (!$this->carry && is_null($l1->next) && is_null($l2->next))
-            ? null
-            : $this->addTwoNumbers($l1->next, $l2->next);
-
-        //完成嵌套循环以定义所有内容后，返回结果
-        return $return;
- */
 class Solution {
  private:
   int carry = 0;
  public:
   ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
     ListNode res(carry + l1->val + l2->val);
-
-//    std::cout << res.val << "\t" << l1->val << "\t" << l2->val << std::endl;
     if (carry = res.val > 9) {
       res.val -= 10;
     }

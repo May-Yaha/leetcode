@@ -25,7 +25,7 @@ class Solution {
   ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
     ListNode res(carry + l1->val + l2->val);
 
-    std::cout << res.val << "\t" << l1->val << "\t" << l2->val << std::endl;
+//    std::cout << res.val << "\t" << l1->val << "\t" << l2->val << std::endl;
     if (carry = res.val > 9) {
       res.val -= 10;
     }
@@ -54,7 +54,11 @@ void add_two_numbers_test() {
   vector_to_linked(l2, l2_list);
 
   Solution solution;
-  solution.addTwoNumbers(&l1, &l2);
+  auto res = solution.addTwoNumbers(&l1, &l2);
+  while (res != nullptr) {
+    std::cout << res << std::endl;
+    res = res->next;
+  }
 }
 
 void conv_linked_test() {
